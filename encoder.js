@@ -1,3 +1,7 @@
+$("#inputText").keydown(function(e) {
+  //var letter = document.getElementById('inputText').value;// takes value in input box
+  //var key = e.keyCode;
+  //$("#textArea").append(code[key]);
 var code = {
   65: "a",
   66: "b",
@@ -29,52 +33,51 @@ var code = {
 }
 
 
-$("#inputText").keydown(function(e) {
-  //var letter = document.getElementById('inputText').value;// takes value in input box
-  var key = e.keyCode;
-  $("#textArea").append(code[key]);
 
-});
+
+
+
 $("input[type='radio']").click(function(e) {
   $("input:checked").prop('checked', true);
   $(this).prop('checked', false);
 });
-if($("input:checked" == "Heiroglyphics")) {
-  var code = {
-    65: "<img src='a.gif' alt='A'>",
-    66: "<img src='b.gif' alt='B'>",
-    67: "<img src='c.gif' alt='C'>",
-    68: "<img src='d.gif' alt='D'>",
-    69: "<img src='e.gif' alt='E'>",
-    70: "<img src='f.gif' alt='F'>",
-    71: "<img src='g.gif' alt='G'>",
-    72: "<img src='h.gif' alt='H'>",
-    73: "<img src='i.gif' alt='I'>",
-    74: "<img src='j.gif' alt='J'>",
-    75: "<img src='k.gif' alt='K'>",
-    76: "<img src='l.gif' alt='L'>",
-    77: "<img src='m.gif' alt='M'>",
-    78: "<img src='n.gif' alt='N'>",
-    79: "<img src='o.gif' alt='O'>",
-    80: "<img src='p.gif' alt='P'>",
-    81: "<img src='q.gif' alt='Q'>",
-    82: "<img src='r.gif' alt='R'>",
-    83: "<img src='s.gif' alt='S'>",
-    84: "<img src='t.gif' alt='T'>",
-    85: "<img src='u.gif' alt='U'>",
-    86: "<img src='v.gif' alt='V'>",
-    87: "<img src='w.gif' alt='W'>",
-    88: "<img src='x.gif' alt='X'>",
-    89: "<img src='y.gif' alt='Y'>",
-    90: "<img src='z.gif' alt='Z'>",
-    8: "",
-  }
 
 
-  $("#inputText").keydown(function(e) {
-    //var letter = document.getElementById('inputText').value;// takes value in input box
-    var key = e.keyCode;
-    $("#textArea").append(code[key]);
+var heiroglyphics = {
+   65: "<img src='images/heiroglyphics/a.gif'>",
+   66: "<img src='images/heiroglyphics/b.gif'>",
+   67: "<img src='images/heiroglyphics/c.gif'>",
+   68: "<img src='images/heiroglyphics/d.gif'>",
+   69: "<img src='images/heiroglyphics/e.gif'>",
+   70: "<img src='images/heiroglyphics/f.gif'>",
+   71: "<img src='images/heiroglyphics/g.gif'>",
+   72: "<img src='images/heiroglyphics/h.gif'>",
+   73: "<img src='images/heiroglyphics/i.gif'>",
+   74: "<img src='images/heiroglyphics/j.gif'>",
+   75: "<img src='images/heiroglyphics/k.gif'>",
+   76: "<img src='images/heiroglyphics/l.gif'>",
+   77: "<img src='images/heiroglyphics/m.gif'>",
+   78: "<img src='images/heiroglyphics/n.gif'>",
+   79: "<img src='images/heiroglyphics/o.gif'>",
+   80: "<img src='images/heiroglyphics/p.gif'>",
+   81: "<img src='images/heiroglyphics/q.gif'>",
+   82: "<img src='images/heiroglyphics/r.gif'>",
+   83: "<img src='images/heiroglyphics/s.gif'>",
+   84: "<img src='images/heiroglyphics/t.gif'>",
+   85: "<img src='images/heiroglyphics/u.gif'>",
+   86: "<img src='images/heiroglyphics/v.gif'>",
+   87: "<img src='images/heiroglyphics/w.gif'>",
+   88: "<img src='images/heiroglyphics/x.gif'>",
+   89: "<img src='images/heiroglyphics/y.gif'>",
+   90: "<img src='images/heiroglyphics/z.gif'>",
+   8: "",
+   32: " ",
+ }
+
+
+
+if($("input:checked").val() == "heiroglyphics") {
+    document.getElementById("textArea").innerHTML += heiroglyphics[e.keyCode];
+}
 
 });
-}
