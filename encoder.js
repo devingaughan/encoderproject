@@ -2,6 +2,8 @@ $("#inputText").keydown(function(e) {
   //var letter = document.getElementById('inputText').value;// takes value in input box
   //var key = e.keyCode;
   //$("#textArea").append(code[key]);
+
+
 var code = {
   65: "a",
   66: "b",
@@ -74,10 +76,89 @@ var heiroglyphics = {
    32: " ",
  }
 
+ var runes = {
+
+   65: "<img src='images/runes/a.gif'>",
+   66: "<img src='images/runes/b.gif'>",
+   67: "<img src='images/runes/c.gif'>",
+   68: "<img src='images/runes/d.gif'>",
+   69: "<img src='images/runes/e.gif'>",
+   70: "<img src='images/runes/f.gif'>",
+   71: "<img src='images/runes/g.gif'>",
+   72: "<img src='images/runes/h.gif'>",
+   73: "<img src='images/runes/i.gif'>",
+   74: "<img src='images/runes/j.gif'>",
+   75: "<img src='images/runes/k.gif'>",
+   76: "<img src='images/runes/l.gif'>",
+   77: "<img src='images/runes/m.gif'>",
+   78: "<img src='images/runes/n.gif'>",
+   79: "<img src='images/runes/o.gif'>",
+   80: "<img src='images/runes/p.gif'>",
+   81: "<img src='images/runes/q.gif'>",
+   82: "<img src='images/runes/r.gif'>",
+   83: "<img src='images/runes/s.gif'>",
+   84: "<img src='images/runes/t.gif'>",
+   85: "<img src='images/runes/u.gif'>",
+   86: "<img src='images/runes/v.gif'>",
+   87: "<img src='images/runes/w.gif'>",
+   88: "<img src='images/runes/x.gif'>",
+   89: "<img src='images/runes/y.gif'>",
+   90: "<img src='images/runes/z.gif'>",
+   8: "",
+   32: " ",
+
+
+ }
+
+ var cipher = {
+   65: "z",
+   66: "a",
+   67: "b",
+   68: "c",
+   69: "d",
+   70: "e",
+   71: "f",
+   72: "g",
+   73: "h",
+   74: "i",
+   75: "j",
+   76: "k",
+   77: "l",
+   78: "m",
+   79: "n",
+   80: "o",
+   81: "p",
+   82: "q",
+   83: "r",
+   84: "s",
+   85: "t",
+   86: "u",
+   87: "v",
+   88: "w",
+   89: "x",
+   90: "y",
+   8: "",
+   32: " ",
+ }
+
+
+
 
 
 if($("input:checked").val() == "heiroglyphics") {
     document.getElementById("textArea").innerHTML += heiroglyphics[e.keyCode];
 }
 
+
+ else if($("input:checked").val() == "rune") {
+  document.getElementById("textArea").innerHTML += runes[e.keyCode];
+}
+
+else if($("input:checked").val() == "echo") {
+ document.getElementById("textArea").innerHTML += echo[e.keyCode];
+}
+
+else if($("input:checked").val() == "ceaser cipher") {
+  document.getElementById("textArea").innerHTML += cipher[e.keyCode];
+}
 });
