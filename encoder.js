@@ -145,6 +145,8 @@ var heiroglyphics = {
 
 
 
+
+
 if($("input:checked").val() == "heiroglyphics") {
     document.getElementById("textArea").innerHTML += heiroglyphics[e.keyCode];
 }
@@ -161,4 +163,11 @@ else if($("input:checked").val() == "echo") {
 else if($("input:checked").val() == "ceaser cipher") {
   document.getElementById("textArea").innerHTML += cipher[e.keyCode];
 }
+});
+
+$("#translationInputArea").keydown(function(e) {
+  if($("input:checked").val() == "ceaser cipher") {
+    var answer = cipher[e.keycode -1];
+  $('#translationArea').append(answer);
+  }
 });
