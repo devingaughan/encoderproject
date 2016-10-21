@@ -1,4 +1,4 @@
-var cipher = {
+var cipher = {  //global variable
   65: "z",
   66: "a",
   67: "b",
@@ -168,6 +168,7 @@ else if($("input:checked").val() == "ceaser cipher") { // if ceaser cipher is se
   document.getElementById("textArea").innerHTML += cipher[e.keyCode];
 }
 });
+
 //decoder input box
 
 $("#translationInputArea").keydown(function(e) {
